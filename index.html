@@ -14,6 +14,18 @@
       max-width: 720px;
       height: 200vh;
     }
+    .player-container {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+    }
+    .player-container::before {
+      display: block;
+      content: "";
+      padding-top: 56.25%;
+    }
     .player-responsive {
       position: absolute;
       top: 0;
@@ -38,7 +50,9 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div class="container">
-    <div id="player" class="player-responsive"></div>
+    <div class="player-container">
+      <div id="player" class="player-responsive"></div>
+    </div>
     <p><a href="https://github.com/youtube-gtm-tracking/youtube-gtm-tracking.github.io">View repository on GitHub</a></p>
     <script>
       // Load the IFrame Player API code asynchronously.

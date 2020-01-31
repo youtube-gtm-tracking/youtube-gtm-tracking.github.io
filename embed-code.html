@@ -14,6 +14,18 @@
       max-width: 720px;
       height: 200vh;
     }
+    .player-container {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+    }
+    .player-container::before {
+      display: block;
+      content: "";
+      padding-top: 56.25%;
+    }
     .player-responsive {
       position: absolute;
       top: 0;
@@ -38,7 +50,9 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div class="container">
-    <iframe id="player" class="player-responsive" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/QQ32MyZmXeQ?embed_config=%7B%22primaryThemeColor%22%3A%22%23FF322E%22%7D&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fyoutube-gtm-tracking.github.io&amp;widgetid=1"></iframe>
+    <div class="player-container">
+      <iframe id="player" class="player-responsive" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/QQ32MyZmXeQ?embed_config=%7B%22primaryThemeColor%22%3A%22%23FF322E%22%7D&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fyoutube-gtm-tracking.github.io&amp;widgetid=1"></iframe>
+    </div>
     <p><a href="https://github.com/youtube-gtm-tracking/youtube-gtm-tracking.github.io">View repository on GitHub</a></p>
   </div>
 </body>
